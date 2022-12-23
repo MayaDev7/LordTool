@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Mario Bros. online</title>
+</head>
+<body>
+    <script>
+        var x = -1
+        function right() {
+            x++;
+            a = " ".repeat(46)+"�"
+            a = a.substring(x)
+            document.getElementById('a').innerHTML = a
+            b = "                                �      ▩�▩�▩".substring(x)
+            document.getElementById('b').innerHTML = b
+        }function left() {
+            if (x > 0){
+                x--;
+            }
+            a = " ".repeat(46)+"�"
+            a = a.substring(x)
+            document.getElementById('a').innerHTML = a
+            b = "                                �      ▩�▩�▩".substring(x)
+            document.getElementById('b').innerHTML = b            
+        }function jump() {
+            b = b.split('');
+            b[3] = '🚶‍♂️';
+            b = b.join('');
+            document.getElementById('b').innerHTML = b
+        }
+    </script>
+    <style>
+    span{ display: inline-block; margin:1em; } 
+    .flip{ transform: scale(-1, 1);}
+    </style>
+    <h1 id="a"></h1>
+    <h1 id="b"></h1>
+    <h1><span class='flip'>🚶‍♂️</span></h1>
+    <button disabled>   </button>
+    <button>⮙</button>
+    <button disabled>   </button><br>
+    <button onclick="left()">⮘</button>
+    <button onclick="jump()">❖</button>
+    <button onclick="right()">⮚</button><br>
+    <button disabled>   </button>
+    <button>⮛</button>
+    <button disabled>   </button>
+</body>
+</html>

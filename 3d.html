@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D test</title>
+</head>
+<body>
+    <script>
+        var x = 0
+        window.addEventListener("keydown", function(event) {
+    if (event.key == "d"){
+        x++;
+        document.getElementById("x").innerHTML = x
+    }if (event.key == "a"){
+        x--;
+        document.getElementById("x").innerHTML = x 
+    }
+});
+    </script>
+    <!--
+    <h1 id="x"></h1>
+    <svg width="400" height="110">
+        <rect id='quad' width='100' height='100' style="fill:#00ffce;filter:url(#filter)" onclick="alert('You have clicked the circle.')"/>
+        <filter id = "filter">
+            <feSpecularLighting result="specOut"
+                specularExponent="20" lighting-color="#bbbbbb">
+              <fePointLight x="50" y="75" z="200"/>
+            </feSpecularLighting>
+            <feComposite in="SourceGraphic" in2="specOut"
+                operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
+          </filter>
+      </svg>
+      <button onclick="quad.style.fill='yellow';">BUTTON</button>
+    -->
+      <svg>
+      <circle r="5" fill="red" viewbox="500 500 500 500">
+        <animateMotion dur="1s" repeatCount="indefinite"
+          path="M 70 110 C 70 140, 110 140, 110" />
+      </circle>
+    </svg>
+
+</body>
+</html>
